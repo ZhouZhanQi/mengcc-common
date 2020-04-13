@@ -50,6 +50,7 @@ public class AesUtil {
      */
     private static byte[] encrypt(String content, String password) {
         try {
+
             Cipher cipher = Cipher.getInstance(ALGORITHM_STRING);
             byte[] byteContent = content.getBytes(CHARSET_NAME);
             cipher.init(Cipher.ENCRYPT_MODE, getSecretKeySpec(password));
